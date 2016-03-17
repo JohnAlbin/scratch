@@ -1,0 +1,18 @@
+{
+    "id":"neihu",
+    "language":"en-GB",
+    "name":"Code Club Neihu Projects",
+    "registration_note": "",
+    "legal": "These projects are for use outside the UK only. More information is available on our website at <a href=\"https://codeclubworld.org/\">www.codeclubworld.org</a>.<br />This coursework is developed in the open on GitHub, at <a href=\"https://github.com/CodeClub/\">www.github.com/CodeClub</a>. Come and join us!",
+    "stylesheets": [],
+    "logo": "/img/cc_logo.png",
+    "favicon": "/img/cc_favicon.ico",
+    "css_variables": {
+        "header_bg_light": "#B1DAAE",
+        "header_bg_dark": "#349946",
+        "header_text": "#FFFFFF"
+    },
+    "analytics_account": "",
+    "analytics_domain": "",
+    "webmaster_tools_verification": ""
+}
