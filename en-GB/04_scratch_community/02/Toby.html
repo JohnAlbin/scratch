@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html class="cc"  lang="en-GB">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="google-site-verification" content="LAa8xdL-G6vOe9RSZnECSduS5m1BMiM8U2erQku5yIE" />
+
+    <title>Toby — Code Club World Projects</title>
+    <link rel="shortcut icon" href="../../../img/cc_favicon.ico">
+
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <link rel="stylesheet" href="../../../css/master.min.css">
+  </head>
+
+  <body class="index-template cc">
+    <header class="header" role="banner">
+      <a class="home-link" href="../../../index.html"><img alt="" class="logo" height="100" src="../../../img/cc_logo.png"></a>
+      <h1 class="title">Toby</h1>
+      <span class="level-indicator">Scratch +</span>
+    </header>
+
+    <nav class="breadcrumbs"><ul class="breadcrumbs-list"><li class="breadcrumbs-item"><a class="breadcrumbs-link" href="../../../index.html">Languages</a></li><li class="breadcrumbs-item"><a class="breadcrumbs-link" href="../../index.html">English</a></li><li class="breadcrumbs-item"><a class="breadcrumbs-link" href="../index.html">Community Contributed Scratch Projects</a></li><li class="breadcrumbs-item current">Toby</li></ul></nav>
+
+          <section class="note registration-note">
+        <p>All Code Clubs <u>must be registered</u>. By registering your club we can measure our impact, and we can continue to provide free resources that help children learn to code. You can register your club at <a href="https://www.codeclubworld.org/">codeclubworld.org</a>.</p>
+      </section>
+    
+    <main class="main lesson-steps" role="main">
+      
+<section id="introduction" class="level1 intro">
+<h1>Introduction</h1>
+<p>In this project, we are going to create a game in which Toby the dog has to collect 5 cheese-puffs bowls to win, whilst preventing balls from falling on the floor.<br />If Toby drops more than 2 balls, the game is over. So the question is: can you keep all the balls in the air?</p>
+<div class="scratch-preview">
+    <iframe allowtransparency="true" width="485" height="402" src="http://scratch.mit.edu/projects/embed/49677948/?autostart=false" frameborder="0"></iframe>
+    <img src="Toby_dog.png">
+</div>
+
+
+
+</section>
+<section id="step-1-controlling-toby" class="level1 activity">
+<h1><strong>Step 1:</strong> Controlling Toby</h1>
+<section id="activity-checklist" class="level2 check">
+<h2>Activity Checklist</h2>
+<ul>
+<li><p>Start a new Scratch project. Delete the cat by right-clicking it and selecting Delete.</p></li>
+<li><p>Click on the stage. Choose a backdrop from the Scratch library: the <strong>night city with street</strong> backdrop is a good choice for this project. Delete the original blank backdrop.</p></li>
+<li><p>Add a new sprite. select the <strong>Dog2</strong> sprite from the <strong>Animals</strong> section.</p></li>
+<li><p><strong>Dog2</strong> comes with three costumes. Delete the third costume <strong>dog2-c</strong> as we only want the first two.</p></li>
+<li><p>Click on the blue <code class="blockmotion">i</code> button to the top left of the sprite picture. Rename the sprite <strong>Toby</strong></p></li>
+<li><p>Select the <code class="blockmotion">left-right rotation style</code> as shown on the picture below:</p>
+<p><img src="Toby_Sprite.png" alt="screenshot" /></p></li>
+<li><p>We want Toby to move right when we press the right arrow key. Click on the scripts tab, and add this script:</p>
+<p><img src="f423eeba07ccc131d30a5d9bb6e8b4f66aaaa85a.png" alt="    when FLAG clicked    
+    switch backdrop to [night city with street v]   
+    forever
+    if &lt;key [right arrow v] pressed?&gt; then
+    point in direction (90 v)
+    move (10) steps
+    next costume
+    end
+    end            " /></p></li>
+<li><p>Click on the Green Flag, and check that Toby can move right when you press the right arrow key. Now we need to add more code to allow Toby to move left as well. Add this to your script:</p>
+<p><img src="381a93dc191f928fdd67c704aa0cbd3989abf758.png" alt="        when FLAG clicked    
+    switch backdrop to [night city with street v]   
+        forever
+    if &lt;key [right arrow v] pressed?&gt; then
+    point in direction (90 v)
+    move (10) steps
+    next costume
+    end 
+        if &lt;key [left arrow v] pressed?&gt; then
+    point in direction (-90 v)
+    move (10) steps
+    next costume
+    end
+        end            " /></p></li>
+</ul>
+</section>
+<section id="test-your-project" class="level2 flag">
+<h2>Test Your Project</h2>
+<p><strong>Click the green flag</strong>, press the left arrow key. Does Toby move left ? Now try the right arrow key!</p>
+</section>
+<section id="save-your-project" class="level2 save">
+<h2>Save your project</h2>
+</section>
+</section>
+<section id="step-2-keeping-toby-busy" class="level1 activity">
+<h1><strong>Step 2:</strong> Keeping Toby busy!</h1>
+<p>Now that Toby can move, let’s give him something to do. In order to win the game, Toby must collect 5 cheese-puffs bowls. We need the bowls to appear randomly at different times and places.</p>
+<section id="activity-checklist-1" class="level2 check">
+<h2>Activity Checklist</h2>
+<ul>
+<li><p>Add a new sprite from the library: select the <strong>cheesy-puffs</strong> from the <strong>Things</strong> category, and rename it <strong>bowl</strong>.</p></li>
+<li><p>Click on the <strong>Costumes</strong> tab and reduce the size of the cheese-puffs bowl by clicking on the <strong>shrink</strong> icon at the top near the scissors. You then need to click on the bowl sprite to make it smaller. The shrink icon looks like this:</p>
+<p><img src="shrink.png" alt="screenshot" /></p></li>
+<li><p>If you used a different method to resize the bowl, you may need to reset the centre of the costume so that it is at the centre of the bowl. To do this, click on the <strong>Set costume centre</strong> icon at the top right corner, and move the crosshair as shown on the picture below:</p>
+<p><img src="Set_centre.png" alt="screenshot" /></p></li>
+<li><p>The <strong>cheesy-puffs</strong> need to appear in random places on the pavement. The <code class="blockmotion">y position</code> will remain the same, but the <code class="blockmotion">x position</code> needs to change so that the bowl sometimes appears on the right, on the left, or in the middle. Add the following script to the <strong>bowl</strong> sprite:</p>
+<p><img src="496d24c58d8c7e556215fe8bff29f36c4f63f0cc.png" alt="    when FLAG clicked  
+    forever
+    wait (5) secs
+    go to x:(pick random (-220) to (220)) y:(-140)
+    end" /></p></li>
+<li><p>Click the green flag, and wait for a bit. Does the cheese-puffs bowl keep moving to different places every 5 seconds?</p></li>
+<li><p>At the moment, the game is too predictable! Let’s make it more difficult by hiding the bowl from time to time. Modify the script in the following way:</p>
+<p><img src="313e888d58a42672118abdf9b70965fd3a947624.png" alt="    when FLAG clicked  
+    hide
+    forever
+    wait (pick random (1) to (10)) secs
+    go to x:(pick random (-220) to (220)) y:(-140)
+    show
+    wait (pick random (1) to (10)) secs
+    hide
+    end" /></p></li>
+</ul>
+</section>
+<section id="test-your-project-1" class="level2 flag">
+<h2>Test Your Project</h2>
+<p><strong>Click the green flag</strong>, the cheese-puffs bowl should now appear for random lengths of time, and in random places.</p>
+</section>
+<section id="save-your-project-1" class="level2 save">
+<h2>Save your project</h2>
+</section>
+</section>
+<section id="step-3-counting-the-bowls" class="level1 activity">
+<h1><strong>Step 3:</strong> Counting the bowls</h1>
+<p>In order to win the game, Toby must collect 5 cheese-puffs bowls.</p>
+<section id="activity-checklist-2" class="level2 check">
+<h2>Activity Checklist</h2>
+<ul>
+<li><p>Create a <code class="blockdata">bowls</code> variable to keep track of how many bowls Toby has collected so far.</p>
+<p><img src="bowls.png" alt="screenshot" /></p></li>
+<li><p>Now we need to add some code to keep track of how many bowls Toby has collected so far. Each time that Toby touches a cheese-puffs bowl, the <code class="blockdata">bowls</code> variable needs to be increased by 1. So add this script to the cheese-puffs bowl sprite. (Make sure that you keep the previous script as well! We need both scripts)</p>
+<p><img src="0fda36705c784942c9ace82711cfe6852a8fb4be.png" alt="        when FLAG clicked  
+    set [bowls v] to (0)
+        forever
+    if &lt;touching [Toby v]?&gt; then
+        change [bowls v] by (1)
+    wait (0.5) secs
+    hide
+    end 
+    end" /></p></li>
+<li><p>The game should be stopped when the number of bowls collected reaches 5. We are going to broadcast a new message called <code class="blockevents">won</code> to the other sprite and the background to let them know that the player has won.<br />Modify your second script so that it looks like this:</p>
+<p><img src="c70fc6a7eac30b8fec8976d7b421697426c9a093.png" alt="    when FLAG clicked  
+    set [bowls v] to (0)
+        forever
+    if &lt;touching [Toby v]?&gt; then        
+    change [bowls v] by (1)
+    if &lt;(bowls) = (5)&gt; then
+    broadcast [won v]
+    stop [other scripts in sprite v]
+    end
+    wait (0.5) secs     
+    hide
+    end 
+    end    " /></p></li>
+<li><p>Add a small script for Toby so that he says ‘well done!’ when he receives the <code class="blockevents">won</code> message:</p>
+<p><img src="731f5f4c76e7f39bca72602b253fb5699789cc0a.png" alt="    when I receive [won v] 
+    say [Well done !] for (2) secs       " /></p></li>
+</ul>
+</section>
+<section id="test-your-project-2" class="level2 flag">
+<h2>Test Your Project</h2>
+<p><strong>Click the green flag</strong>, does the <code class="blockdata">bowls</code> variable increase each time the dog collects a bowl? Does Toby say “well done” once 5 bowls have been collected?</p>
+</section>
+<section id="save-your-project-2" class="level2 save">
+<h2>Save your project</h2>
+</section>
+<section id="challenge-1-adding-sound" class="level2 challenge">
+<h2>Challenge 1: Adding sound</h2>
+<ul>
+<li><p>Can you add some code to play a <strong>pop</strong> sound each time a bowl is collected?</p></li>
+<li><p>Can you add a small script for the background so that it changes and plays music when the player wins?</p></li>
+</ul>
+<p>Hint: You will need to add a script for your stage starting with a <code class="blockevents">when I receive won</code> block</p>
+</section>
+<section id="save-your-project-3" class="level2 save">
+<h2>Save your project</h2>
+</section>
+</section>
+<section id="step-4-adding-a-bouncing-ball" class="level1 activity">
+<h1><strong>Step 4:</strong> Adding a bouncing ball</h1>
+<p>Let’s make the game a bit more exciting by adding a bouncing ball!<br />Toby has to catch the ball. If Toby drops 3 balls before he has time to collect his 5 bowls of cheese-puffs, the game is over!</p>
+<section id="activity-checklist-3" class="level2 check">
+<h2>Activity Checklist</h2>
+<ul>
+<li><p>Add a new sprite: select the <strong>Beachball</strong> from the Scratch library.</p></li>
+<li><p>Shrink the <strong>Beachball</strong>. Make sure that the centre of the costume is set correctly, i.e. at the centre of the ball. You can check this by clicking on the <strong>Set costume centre</strong> icon, located at the top right corner in the <strong>Costumes</strong> tab. It is important to set the centre correctly, as it will affect the way the ball moves.</p></li>
+<li><p>Now we need this ball to fall from the sky, and bounce everywhere. Add the following script to your ball:</p>
+<p><img src="bb821fc890e2cc7ddf85326b28b13b8c14a022d0.png" alt="    when FLAG clicked  
+    show
+    go to x:(pick random (-220) to (220)) y:(160)
+    point in direction (135 v)
+    forever
+    move (4) steps
+    if on edge, bounce
+    end" /></p></li>
+</ul>
+</section>
+<section id="test-your-project-3" class="level2 flag">
+<h2>Test Your Project</h2>
+<p><strong>Click the green flag</strong>, your ball should fall from the sky and bounce off the edges of the background. Which number do you need to modify to make the ball bounce faster or slower?</p>
+</section>
+<section id="save-your-project-4" class="level2 save">
+<h2>Save your project</h2>
+</section>
+</section>
+<section id="step-5-add-more-bounce" class="level1 activity">
+<h1><strong>Step 5:</strong> Add more bounce</h1>
+<p>But the problem is: nothing happens when Toby touches the ball. Let’s fix this!</p>
+<section id="activity-checklist-4" class="level2 check">
+<h2>Activity Checklist</h2>
+<ul>
+<li><p>Modify your script so that when the ball touches Toby, it bounces off as well:</p>
+<p><img src="33164c93649b6e54e588adab8a7a5d7976c1d65a.png" alt="    when FLAG clicked  
+    show
+    go to x:(pick random (-220) to (220)) y:(160)
+    point in direction (135 v)
+    forever
+    move (4) steps
+    if on edge, bounce
+    if &lt;touching [Toby v]?&gt; then
+    turn right (pick random (90) to (270)) degrees
+    move (100) steps
+    end
+    end" /></p></li>
+<li><p>We also need to add some code to detect when the ball touches the floor. The ball seems to be touching the floor when its <code class="blockmotion">y position</code> is less than 140. This is an approximate number, and you may need to adjust it, especially if you have chosen a different background.<br />We are going to modify the script so that the ball moves back to the top (and changes colour) as soon as it is dropped. Import the <strong>water drop</strong> sound, and modify your script again:</p>
+<p><img src="34c2262b3e4ea30bde7f0cdfe71c86c95e40c987.png" alt="    when FLAG clicked  
+    show
+    go to x:(pick random (-220) to (220)) y:(160)
+    point in direction (135 v)
+    forever
+    move (4) steps
+    if on edge, bounce
+    if &lt;touching [Toby v]?&gt; then
+    turn right (pick random (90) to (270)) degrees
+    move (100) steps
+    end
+    if &lt;(y position) &lt; (-140)&gt; then
+    change [color v] effect by (25)
+    go to x:(pick random (-220) to (220)) y:(160)
+    play sound [water drop v]
+    end
+    end" /></p></li>
+</ul>
+</section>
+<section id="test-your-project-4" class="level2 flag">
+<h2>Test Your Project</h2>
+<p><strong>Click the green flag</strong>, what happens when the ball is dropped ?<br />Can you see a new ball falling from the top? Is it a different colour?</p>
+</section>
+<section id="save-your-project-5" class="level2 save">
+<h2>Save your project</h2>
+</section>
+</section>
+<section id="step-6-counting-the-dropped-balls" class="level1 activity">
+<h1><strong>Step 6:</strong> Counting the dropped balls</h1>
+<section id="activity-checklist-5" class="level2 check">
+<h2>Activity Checklist</h2>
+<ul>
+<li><p>We now need to keep track of how many balls Toby has dropped so far. To do this, create a variable for all sprites called <code class="blockdata">droppedBalls</code>.</p>
+<p><img src="droppedBalls.png" alt="screenshot" /></p></li>
+<li><p>When we start the game, Toby has not dropped any balls yet, so we need to initialise the <code class="blockdata">droppedBalls</code> variable to 0. Each time the balls touches the floor, the <code class="blockdata">droppedBalls</code> variable needs to be increased by 1.<br />When the number of dropped balls is more than 3, the game is over, so we will broadcast a new message called <code class="blockevents">gameover</code> to tell the other sprites and the background that the game is over, and the player has lost. Your <strong>Beachball</strong> script should now look like this:</p>
+<p><img src="794fa5809de4d54ce2a41af60dc5a1d905c4ca6f.png" alt="    when FLAG clicked  
+    set [droppedBalls v] to (0)
+    show
+    go to x:(pick random (-220) to (220)) y:(160)
+    point in direction (135 v)
+    forever
+    move (4) steps
+    if on edge, bounce
+    if &lt;touching [Toby v]?&gt; then
+    turn right (pick random (90) to (270)) degrees
+    move (100) steps
+    end
+    if &lt;(y position) &lt; (-140)&gt; then
+    change [droppedBalls v] by (1)
+    if &lt;(droppedBalls) = (3)&gt; then
+    broadcast [gameOver v]
+    hide
+    stop [this script v]
+    end 
+    change [color v] effect by (25)
+    go to x:(pick random (-220) to (220)) y:(160)
+    play sound [water drop v]
+    end
+    end" /></p></li>
+<li><p>When the players wins, the game should stop, and the ball should stop bouncing and hide:</p>
+<p><img src="69b8ff37995ba649c5ae3de1f5bd031668115418.png" alt="    when I receive [won v]
+    hide
+    stop [other scripts in sprite v]" /></p></li>
+<li><p>Add this script to your <strong>bowl</strong> sprite to stop it from appearing when the game is over:</p>
+<p><img src="91196e0062f11ff02a250a563f3f1293f84c36e7.png" alt="    when I receive [gameOver v]
+    stop [other scripts in sprite v]" /></p></li>
+<li><p>Click on the stage. Then click on the Sounds tab, and import the <strong>spooky string</strong> sound from the Scratch library, and the <strong>triumph</strong> sound.</p></li>
+<li><p>Add this script to the stage so that it plays a <strong>spooky string</strong> sound when the game is over:</p>
+<p><img src="d939691101543ac8e069fa6796b5cb7bb4447769.png" alt="    when I receive [gameOver v]
+    change [color v] effect by (25)
+    play sound [spooky string v]" /></p></li>
+<li><p>Add this script to the stage so that it changes colour several times and plays a <strong>triumph</strong> sound when the player wins:</p>
+<p><img src="fc61da85bc978f5f645ed19fc43d3231a5a1625f.png" alt="    when I receive [won v]
+    play sound [triumph v]
+    repeat (12)
+    change [color v] effect by (25)
+    wait (0.5) secs
+    end" /></p></li>
+<li><p>Finally, add this script to make sure the colour of the stage comes back to normal when the game is restarted.</p>
+<p><img src="51ead5008721674527ca19ae37bb2814c1f1dccd.png" alt="    when FLAG clicked
+    clear graphic effects" /></p></li>
+</ul>
+</section>
+<section id="test-your-project-5" class="level2 flag">
+<h2>Test Your Project</h2>
+<p><strong>Click the green flag</strong>, does the <code class="blockdata">droppedBalls</code> variable increase each time a ball is dropped? Test your game in as many ways that you can think of (winning and losing for example) Does it work as expected?</p>
+</section>
+<section id="save-your-project-6" class="level2 save">
+<h2>Save your project</h2>
+</section>
+<section id="challenge-2-make-the-game-more-challenging" class="level2 challenge">
+<h2>Challenge 2: make the game more challenging</h2>
+<p>What could you do to make the game more challenging? Here are some suggestions:</p>
+<ul>
+<li>Make the bowls hide more quickly, and for longer. Which parameters do you need to modify to achieve this?<br /></li>
+<li>Make the ball move a lot faster, or add another ball: maybe it could be a basketball this time. You can copy the script from the beach ball onto the basketball using drag and drop, there is no need to rewrite the whole script…<br /></li>
+<li>You could make a level 2 for your game, with a different background, and more balls bouncing around. Instead of collecting cheese-puffs bowls, Toby could this time collect some donuts. (There is a <strong>donut</strong> sprite in the Scratch library). You could create a <code class="blockdata">level</code> variable to keep track of the level you’re currently playing.</li>
+</ul>
+</section>
+<section id="save-your-project-7" class="level2 save">
+<h2>Save your project</h2>
+<p>Well done, you have finished! Now you can enjoy your game!</p>
+<p>Don’t forget you can share your game with all your friends and family by clicking on <strong>Share</strong> on the menu bar!</p>
+</section>
+</section>
+    </main>
+
+    <aside class="legal-notice copyright">
+      <p>These projects are for use outside the UK only. More information is available on our website at <a href="https://codeclubworld.org/">www.codeclubworld.org</a>.<br />This coursework is developed in the open on GitHub, at <a href="https://github.com/CodeClub/">www.github.com/CodeClub</a>. Come and join us!</p>
+      <p>&copy; 2016 Code Club. This content is for non-commercial use only and we reserve the right at any time to withdraw permission for use. Use of Code Club’s trade marks (including but not limited to its name and logo) requires prior written consent. Please read our <a href="https://www.codeclub.org.uk/terms-and-conditions">terms and conditions</a> before volunteering or hosting a Code Club.</p>
+    </aside>
+
+    <div id="legend">
+        <div>
+            <img src="../../../img/check.png" alt="Activity Checklist" />
+            <div class="caption"><span class="check_text">Activity Checklist</span></div>
+            <div class="description">Follow these <span class="check_text upper">instructions</span> one by one</div>
+        </div>
+        <div>
+          <img src="../../../img/flag.png" alt="Test your Project" />
+          <div class="caption"><span class="flag_text">Test your Project</span></div>
+          <div class="description">Click on the green flag to <span class="flag_text upper">test</span> your code</div>
+        </div>
+        <div>
+          <img src="../../../img/save.png" alt="Save your Project" />
+          <div class="caption"><span class="save_text">Save your Project</span></div>
+          <div class="description">Make sure to <span class="save_text upper">save</span> your work now</div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../../../js/lesson.js"></script>
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-30750176-5']);
+      _gaq.push(['_setDomainName', 'projects.codeclubworld.org']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html class="cc"  lang="en-GB">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="google-site-verification" content="LAa8xdL-G6vOe9RSZnECSduS5m1BMiM8U2erQku5yIE" />
+
+    <title>ChatBot — Code Club World Projects</title>
+    <link rel="shortcut icon" href="../../../img/cc_favicon.ico">
+
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <link rel="stylesheet" href="../../../css/master.min.css">
+  </head>
+
+  <body class="index-template cc">
+    <header class="header" role="banner">
+      <a class="home-link" href="../../../index.html"><img alt="" class="logo" height="100" src="../../../img/cc_logo.png"></a>
+      <h1 class="title">ChatBot</h1>
+      <span class="level-indicator">Scratch 1</span>
+    </header>
+
+    <nav class="breadcrumbs"><ul class="breadcrumbs-list"><li class="breadcrumbs-item"><a class="breadcrumbs-link" href="../../../index.html">Languages</a></li><li class="breadcrumbs-item"><a class="breadcrumbs-link" href="../../index.html">English</a></li><li class="breadcrumbs-item"><a class="breadcrumbs-link" href="../index.html">Scratch 1</a></li><li class="breadcrumbs-item current">ChatBot</li></ul></nav>
+
+          <section class="note registration-note">
+        <p>All Code Clubs <u>must be registered</u>. By registering your club we can measure our impact, and we can continue to provide free resources that help children learn to code. You can register your club at <a href="https://www.codeclubworld.org/">codeclubworld.org</a>.</p>
+      </section>
+    
+    <main class="main lesson-steps" role="main">
+      
+<section id="introduction" class="level1 intro">
+<h1>Introduction</h1>
+<p>You are going to learn how to program your own talking robot!</p>
+<div class="scratch-preview">
+  <iframe allowtransparency="true" width="485" height="402" src="http://scratch.mit.edu/projects/embed/26762091/?autostart=false" frameborder="0"></iframe>
+  <img src="chatbot-final.png">
+</div>
+
+
+</section>
+<section id="step-1-your-chatbot" class="level1 activity">
+<h1>Step 1: Your chatbot</h1>
+<section id="activity-checklist" class="level2 check">
+<h2>Activity Checklist</h2>
+<ul>
+<li><p>Before you start making your chatbot, you need to decide on their personality.</p>
+<ul>
+<li>What is their name?<br /></li>
+<li>Where do they live?<br /></li>
+<li>Are they happy? serious? funny? shy? friendly?</li>
+</ul></li>
+<li><p>Start a new Scratch project, and delete the cat sprite so that your project is empty. You can find the online Scratch editor at <a href="http://jumpto.cc/scratch-new">jumpto.cc/scratch-new</a>.</p></li>
+<li><p>Choose one of these character sprites, and add them to your project:</p>
+<p><img src="chatbot-characters.png" alt="screenshot" /></p></li>
+<li><p>Choose a backdrop that fits your chatbot’s personality. Here’s an example, although yours doesn’t have to look like this:</p>
+<p><img src="chatbot-sprite.png" alt="screenshot" /></p></li>
+</ul>
+</section>
+<section id="save-your-project" class="level2 save">
+<h2>Save your project</h2>
+</section>
+</section>
+<section id="step-2-a-talking-chatbot" class="level1 activity">
+<h1>Step 2: A talking chatbot</h1>
+<p>Now that you have a chatbot with a personality, let’s program it to talk to you.</p>
+<section id="activity-checklist-1" class="level2 check">
+<h2>Activity Checklist</h2>
+<ul>
+<li><p>Click on your chatbot character, and add this code:</p>
+<p><img src="a7c6827858087ae1f7d21c8b7960fcf89e897987.png" alt="    when this sprite clicked
+    ask [Hey! What&#39;s your name?] and wait
+    say [What a lovely name!] for (2) secs" /></p></li>
+<li><p>Click your chatbot to test it out. After you are asked your name, type it into the box along the bottom of the stage.</p>
+<p><img src="chatbot-text.png" alt="screenshot" /></p></li>
+<li><p>Your chatbot simply replies <code>What a lovely name!</code> every time. You can personalise your chatbot’s reply, by making use of the user’s answer. Change the chatbot’s code, so that it looks like this:</p>
+<p><img src="8e2aee42822915eafead46c2ca2b2a2240c1c9c2.png" alt="    when this sprite clicked
+    ask [Hey! What&#39;s your name?] and wait
+    say &lt;join [Hi] (answer)&gt; for (2) secs" /></p>
+<p>To create the last block, you’ll need to first drag on a green <code class="blockoperators">join</code> block, and drag it on to the <code class="blocklooks">say</code> block.</p>
+<p><img src="chatbot-join.png" alt="screenshot" /></p>
+<p>You can then change the text <code>hello</code> to say <code>Hi</code>, and drag the light blue <code class="blocksensing">answer</code> block (from the ‘Sensing’ section) onto the text <code>world</code>.</p>
+<p><img src="chatbot-answer.png" alt="screenshot" /></p></li>
+<li><p>Test out this new program. Does it work as you expected? Can you fix any problems that you can see? (Hint: you can try adding in a space somewhere!)</p></li>
+<li><p>It may be that you want to store the user’s name in a variable, so that you can use it again later. Create a new variable called <code class="blockdata">name</code>. If you’ve forgotten how to do this, the ‘Balloons’ project will help you.</p></li>
+<li><p>The information that you entered is already stored in a special variable called <code class="blocksensing">answer</code>. Go to the Sensing group of blocks and click the answer block so that a tick appears. The current value in <code class="blocksensing">answer</code> should then be shown on the top-left of the stage.</p></li>
+<li><p>Once you’ve created your new variable, make sure that your chatbot’s code looks like this:</p>
+<p><img src="d9ce2c3f13fac0bbe6695a0bcbfc64785cb71915.png" alt="    when this sprite clicked
+    ask [Hey! What&#39;s your name?] and wait
+    set [name v] to (answer)
+    say &lt;join [Hi ] (name)&gt; for (2) secs" /></p></li>
+<li><p>If you test your program again, you’ll notice that the answer is stored in the <code class="blockdata">name</code> variable, and is shown in the top-left of the stage. The <code class="blockdata">name</code> variable should now contain the same value as the <code class="blocksensing">answer</code> variable.</p>
+<p><img src="chatbot-variable.png" alt="screenshot" /></p>
+<p>If you’d rather not see the variables on your stage, you can click the tick next to the variable names in the ‘Scripts’ tab to hide them.</p></li>
+</ul>
+</section>
+<section id="save-your-project-1" class="level2 save">
+<h2>Save your project</h2>
+</section>
+<section id="challenge-more-questions" class="level2 challenge">
+<h2>Challenge: More questions</h2>
+<p>Program your chatbot to ask another question. Can you store their answer in a variable?</p>
+<p><img src="chatbot-question.png" alt="screenshot" /></p>
+</section>
+<section id="save-your-project-2" class="level2 save">
+<h2>Save your project</h2>
+</section>
+</section>
+<section id="step-3-making-decisions" class="level1 activity">
+<h1>Step 3: Making decisions</h1>
+<p>You can program your chatbot to decide what to do, based on the user’s responses.</p>
+<section id="activity-checklist-2" class="level2 check">
+<h2>Activity Checklist</h2>
+<ul>
+<li><p>Let’s get your chatbot to ask the user a question which has a <code>yes</code> or <code>no</code> answer. Here’s an example, but you can change the question if you like:</p>
+<p><img src="8fbde95e8843327e9f58d464ea9ef41eec91f161.png" alt="    when this sprite clicked
+    ask [Hey! What&#39;s your name?] and wait
+    set [name v] to (answer)
+    say &lt;join [Hi ] (name)&gt; for (2) secs
+    ask &lt;join [Are you OK ] (name)&gt; and wait
+    if ((answer)=[yes]) then
+        say [That&#39;s great to hear!] for (2) secs
+    end" /></p>
+<p>Notice that now you’ve stored the user’s name in a variable, you can use it as much as you like.</p></li>
+<li><p>To test this program properly, you’ll need to test it twice - once typing <code>no</code> as your answer, and once typing <code>yes</code>. You should only get a response from your chatbot <code class="blockcontrol">if</code> you answer <code>yes</code>.</p></li>
+<li><p>The trouble with your chatbot is that it doesn’t give a reply if the user answers <code>no</code>. You can fix this, by changing the <code class="blockcontrol">if</code> block to an <code class="blockcontrol">if/else</code> block, so that your code now looks like this:</p>
+<p><img src="1c759e65c33e4ff5c64e317cdb10411a71b76296.png" alt="    when this sprite clicked
+    ask [Hey! What&#39;s your name?] and wait
+    set [name v] to (answer)
+    say &lt;join [Hi ] (name)&gt; for (2) secs
+    ask &lt;join [Are you OK ] (name)&gt; and wait
+    if ((answer)=[yes]) then
+        say [That&#39;s great to hear!] for (2) secs
+    else
+        say [Oh no!] for (2) secs
+    end" /></p></li>
+<li><p>If you test your code, you’ll now see that you get a response when you answer <code>yes</code> or <code>no</code>. Your chatbot should reply with <code>That's great to hear!</code> when you answer <code>yes</code>, but will reply with <code>Oh no!</code> if you type anything other than <code>yes</code> (<code class="blockcontrol">else</code> means ‘otherwise’).</p>
+<p><img src="chatbot-else.png" alt="screenshot" /></p></li>
+<li><p>You can put any code inside an <code class="blockcontrol">if</code> or <code class="blockcontrol">else</code> block, not just code to make your chatbot speak. For example, you can change the chatbot’s costume to match the response.</p>
+<p>If you have a look at your chatbot’s costumes, you may see that there is more than one. (If not, you can always add more yourself!)</p>
+<p><img src="chatbot-costumes.png" alt="screenshot" /></p>
+<p>You can use these costumes as part of your chatbot’s response, by adding this code:</p>
+<p><img src="chatbot-costumes-code.png" alt="screenshot" /></p></li>
+<li><p>Test out your program, and you should see your chatbot’s face change depending on the answer you give.</p>
+<p><img src="chatbot-face.png" alt="screenshot" /></p></li>
+</ul>
+</section>
+<section id="save-your-project-3" class="level2 save">
+<h2>Save your project</h2>
+</section>
+<section id="challenge-more-decisions" class="level2 challenge">
+<h2>Challenge: More decisions</h2>
+<p>Program your chatbot to ask another question - something with a <code>yes</code> or <code>no</code> answer. Can you make your chatbot respond to the answer?</p>
+<p><img src="chatbot-joke.png" alt="screenshot" /></p>
+</section>
+<section id="save-your-project-4" class="level2 save">
+<h2>Save your project</h2>
+</section>
+</section>
+<section id="step-4-changing-location" class="level1 activity">
+<h1>Step 4: Changing location</h1>
+<p>You can also program your chatbot to change its location.</p>
+<section id="activity-checklist-3" class="level2 check">
+<h2>Activity Checklist</h2>
+<ul>
+<li><p>Add another backdrop to your stage, for example the ‘moon’ backdrop.</p>
+<p><img src="chatbot-moon.png" alt="screenshot" /></p></li>
+<li><p>You can now program your chatbot to change location, by adding this code to your chatbot:</p>
+<p><img src="2913e7b3e824689047bf65c31e5608ae462e9d3f.png" alt="    ask [I&#39;m going to the moon. Do you want to come with me?] and wait
+    if ((answer) = [yes]) then
+        switch backdrop to [moon v]
+    end" /></p></li>
+<li><p>You also need to make sure that your chatbot is outside when you start talking to it. Add this block to the top of your chatbot code:</p>
+<p><img src="chatbot-outside.png" alt="screenshot" /></p></li>
+<li><p>Test your program, and answer <code>yes</code> when asked if you want to go to the moon. You should see that the chatbot’s location has changed.</p>
+<p><img src="chatbot-backdrop.png" alt="screenshot" /></p></li>
+<li><p>Does your chatbot change location if you type <code>no</code>? What about if you type <code>I'm not sure</code>?</p></li>
+<li><p>You can also add this code inside your <code class="blockcontrol">if</code> block, to make your chatbot jump up and down 4 times if the answer is <code>yes</code>:</p>
+<p><img src="30afaca3edc21ba9207822a003ede17ee810f14b.png" alt="repeat (4)
+    change y by (10)
+    wait (0.1) secs
+    change y by (-10)
+    wait (0.1) secs
+end" /></p>
+<p><img src="chatbot-loop.png" alt="screenshot" /></p></li>
+<li><p>Test your code again. Does your chatbot jump up and down if you answer <code>yes</code>?</p></li>
+</ul>
+</section>
+<section id="save-your-project-5" class="level2 save">
+<h2>Save your project</h2>
+</section>
+<section id="challenge-make-your-own-chatbot" class="level2 challenge">
+<h2>Challenge: Make your own chatbot</h2>
+<p>Use what you’ve learnt to finish creating your interactive chatbot. Here are some ideas:</p>
+<p><img src="chatbot-ideas.png" alt="screenshot" /></p>
+<p>Once you’ve finished making your chatbot, get your friends to have a conversation with it! Do they like your character? Did they spot any problems?</p>
+</section>
+<section id="save-your-project-6" class="level2 save">
+<h2>Save your project</h2>
+</section>
+</section>
+    </main>
+
+    <aside class="legal-notice copyright">
+      <p>These projects are for use outside the UK only. More information is available on our website at <a href="https://codeclubworld.org/">www.codeclubworld.org</a>.<br />This coursework is developed in the open on GitHub, at <a href="https://github.com/CodeClub/">www.github.com/CodeClub</a>. Come and join us!</p>
+      <p>&copy; 2016 Code Club. This content is for non-commercial use only and we reserve the right at any time to withdraw permission for use. Use of Code Club’s trade marks (including but not limited to its name and logo) requires prior written consent. Please read our <a href="https://www.codeclub.org.uk/terms-and-conditions">terms and conditions</a> before volunteering or hosting a Code Club.</p>
+    </aside>
+
+    <div id="legend">
+        <div>
+            <img src="../../../img/check.png" alt="Activity Checklist" />
+            <div class="caption"><span class="check_text">Activity Checklist</span></div>
+            <div class="description">Follow these <span class="check_text upper">instructions</span> one by one</div>
+        </div>
+        <div>
+          <img src="../../../img/flag.png" alt="Test your Project" />
+          <div class="caption"><span class="flag_text">Test your Project</span></div>
+          <div class="description">Click on the green flag to <span class="flag_text upper">test</span> your code</div>
+        </div>
+        <div>
+          <img src="../../../img/save.png" alt="Save your Project" />
+          <div class="caption"><span class="save_text">Save your Project</span></div>
+          <div class="description">Make sure to <span class="save_text upper">save</span> your work now</div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../../../js/lesson.js"></script>
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-30750176-5']);
+      _gaq.push(['_setDomainName', 'projects.codeclubworld.org']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
+</html>

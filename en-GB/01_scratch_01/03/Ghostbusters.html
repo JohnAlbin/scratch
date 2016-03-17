@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html class="cc"  lang="en-GB">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="google-site-verification" content="LAa8xdL-G6vOe9RSZnECSduS5m1BMiM8U2erQku5yIE" />
+
+    <title>Ghostbusters — Code Club World Projects</title>
+    <link rel="shortcut icon" href="../../../img/cc_favicon.ico">
+
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <link rel="stylesheet" href="../../../css/master.min.css">
+  </head>
+
+  <body class="index-template cc">
+    <header class="header" role="banner">
+      <a class="home-link" href="../../../index.html"><img alt="" class="logo" height="100" src="../../../img/cc_logo.png"></a>
+      <h1 class="title">Ghostbusters</h1>
+      <span class="level-indicator">Scratch 1</span>
+    </header>
+
+    <nav class="breadcrumbs"><ul class="breadcrumbs-list"><li class="breadcrumbs-item"><a class="breadcrumbs-link" href="../../../index.html">Languages</a></li><li class="breadcrumbs-item"><a class="breadcrumbs-link" href="../../index.html">English</a></li><li class="breadcrumbs-item"><a class="breadcrumbs-link" href="../index.html">Scratch 1</a></li><li class="breadcrumbs-item current">Ghostbusters</li></ul></nav>
+
+          <section class="note registration-note">
+        <p>All Code Clubs <u>must be registered</u>. By registering your club we can measure our impact, and we can continue to provide free resources that help children learn to code. You can register your club at <a href="https://www.codeclubworld.org/">codeclubworld.org</a>.</p>
+      </section>
+    
+    <main class="main lesson-steps" role="main">
+      
+<section id="note" class="level2 challenge pdf-hidden">
+<h2>Note:</h2>
+<p>The ‘Balloons’ project has been moved to the <a href="http://projects.codeclub.org.uk/en-GB/03_scratch_bonus/index.html">Additional Scratch Projects</a> section.</p>
+</section>
+<section id="introduction" class="level1 intro">
+<h1>Introduction</h1>
+<p>You are going to make a ghost-catching game!</p>
+<div class="scratch-preview">
+  <iframe allowtransparency="true" width="485" height="402" src="http://scratch.mit.edu/projects/embed/60787262/?autostart=false" frameborder="0"></iframe>
+  <img src="ghost-final.png">
+</div>
+
+
+</section>
+<section id="step-1-animating-a-ghost" class="level1 activity">
+<h1>Step 1: Animating a ghost</h1>
+<section id="activity-checklist" class="level2 check">
+<h2>Activity Checklist</h2>
+<ul>
+<li><p>Start a new Scratch project, and delete the cat sprite so that your project is empty. You can find the online Scratch editor at <a href="http://jumpto.cc/scratch-new">jumpto.cc/scratch-new</a>.</p></li>
+<li><p>Add in a new ghost sprite, and a suitable stage backdrop.</p>
+<p><img src="ghost-ghost.png" alt="screenshot" /></p></li>
+<li><p>Add this code to your ghost, so that it repeatedly appears and disappears:</p>
+<p><img src="270b9ce79895ee7d40bc5f1b9f75ca7da8cecf0f.png" alt="    when flag clicked
+    forever
+        hide
+        wait (1) secs
+        show
+        wait (1) secs
+    end" /></p></li>
+<li><p>Test out your ghost’s code, by clicking the green flag.</p></li>
+</ul>
+</section>
+<section id="save-your-project" class="level2 save">
+<h2>Save your project</h2>
+</section>
+</section>
+<section id="step-2-random-ghosts" class="level1 activity">
+<h1>Step 2: Random ghosts</h1>
+<p>Your ghost is really easy to catch, because it doesn’t move!</p>
+<section id="activity-checklist-1" class="level2 check">
+<h2>Activity Checklist</h2>
+<ul>
+<li><p>Instead of staying in the same position, you can let Scratch choose random x and y coordinates instead. Add a <code class="blockmotion">go to</code> block to your ghost’s code, so that it looks like this:</p>
+<p><img src="46b448cb56c62f5d759a43667a8838ebe9cf6a9d.png" alt="    when flag clicked
+    forever
+        hide
+        wait (1) secs
+        go to x:(pick random (-150) to (150)) y:(pick random (-150) to (150))
+        show
+        wait (1) secs
+    end" /></p></li>
+<li><p>Test our your ghost again, and you should notice that it appears in a different place each time.</p></li>
+</ul>
+</section>
+<section id="save-your-project-1" class="level2 save">
+<h2>Save your project</h2>
+</section>
+<section id="challenge-more-randomness" class="level2 challenge">
+<h2>Challenge: More randomness</h2>
+<p>Can you make your ghost <code class="blockcontrol">wait</code> a random amount of time before appearing? Can you use the <code class="blocklooks">set size</code> block to make your ghost a random size each time it appears?</p>
+</section>
+<section id="save-your-project-2" class="level2 save">
+<h2>Save your project</h2>
+</section>
+</section>
+<section id="step-3-catching-ghosts" class="level1 activity">
+<h1>Step 3: Catching ghosts</h1>
+<p>Lets allow the player to catch ghosts!</p>
+<section id="activity-checklist-2" class="level2 check">
+<h2>Activity Checklist</h2>
+<ul>
+<li><p>To allow the player to catch a ghost, add this code:</p>
+<p><img src="ecb86d482b3ae1bf43a96d2d674d54f77827ea88.png" alt="    when this sprite clicked
+    hide" /></p></li>
+<li><p>Test out your project. Can you catch ghosts as they appear? If you find it difficult to catch the ghosts, you can play the game in fullscreen mode by clicking this button:</p>
+<p><img src="ghost-fullscreen.png" alt="screenshot" /></p></li>
+</ul>
+</section>
+<section id="challenge-adding-a-sound" class="level2 challenge">
+<h2>Challenge: Adding a sound</h2>
+<p>Can you make a sound each time a ghost is caught?</p>
+</section>
+<section id="save-your-project-3" class="level2 save">
+<h2>Save your project</h2>
+</section>
+</section>
+<section id="step-4-adding-a-score" class="level1 activity new-page">
+<h1>Step 4: Adding a score</h1>
+<p>Let’s make things more interesting by keeping score.</p>
+<section id="activity-checklist-3" class="level2 check">
+<h2>Activity Checklist</h2>
+<ul>
+<li><p>To keep the player’s score, you need a place to put it. A <strong>variable</strong> is a place to store data that can change, like a score.</p>
+<p>To create a new variable, click on the ‘Scripts’ tab, select <code class="blockdata">Data</code> and then click ‘Make a Variable’.</p>
+<p><img src="ghost-score.png" alt="screenshot" /></p>
+<p>Type ‘score’ as the name of the variable, make sure that it is available for all sprites, and click ‘OK’ to create it. You’ll then see lots of code blocks that can be used with your <code class="blockdata">score</code> variable.</p>
+<p><img src="ghost-variable.png" alt="screenshot" /></p>
+<p>You’ll also see the score in the top-left of the stage.</p>
+<p><img src="ghost-stage-score.png" alt="screenshot" /></p></li>
+<li><p>When a new game is started (by clicking the flag), you should set the player’s score to 0:</p>
+<p><img src="3120543e3b2085c73e357ff3069b8877cf0ba104.png" alt="when flag clicked
+set [score v] to [0]" /></p></li>
+<li><p>Whenever a ghost is caught, you need to add 1 to the player’s score:</p>
+<p><img src="ghost-change-score.png" alt="screenshot" /></p></li>
+<li><p>Run your program again and catch some ghosts. Does your score change?</p></li>
+</ul>
+</section>
+<section id="save-your-project-4" class="level2 save">
+<h2>Save your project</h2>
+</section>
+</section>
+<section id="step-5-adding-a-timer" class="level1 activity">
+<h1>Step 5: Adding a timer</h1>
+<p>You can make your game more interesting, by only giving your player 10 seconds to catch as many ghosts as possible.</p>
+<section id="activity-checklist-4" class="level2 check">
+<h2>Activity Checklist</h2>
+<ul>
+<li><p>You can use another variable to store the remaining time left. Click on the stage, and create a new variable called ‘time’:</p>
+<p><img src="ghost-time.png" alt="screenshot" /></p></li>
+<li><p>This is how the timer should work:</p>
+<ul>
+<li>The timer should start at 10 seconds;<br /></li>
+<li>The timer should count down every second;<br /></li>
+<li>The game should stop when the timer gets to 0.</li>
+</ul>
+<p>Here’s the code to do this, which you can add to your <strong>stage</strong>:</p>
+<p><img src="f20b37290c163149db64987db8363ab84c457e00.png" alt="    when flag clicked
+    set [time v] to [10]
+    repeat until &lt;(time) = [0]&gt;
+        wait (1) secs
+        change [time v] by (-1)
+    end
+    stop [all v]" /></p>
+<p>This is how you add the <code class="blockcontrol">repeat until</code><code class="blockdata">time</code><code class="blockoperators">= 0</code> code:</p>
+<p><img src="ghost-timer-help.png" alt="screenshot" /></p></li>
+<li><p>Drag your ‘time’ variable display to the right side of the stage. You can also right-click on the variable display and choose ‘large readout’ to change how the time is displayed.</p>
+<p><img src="ghost-readout.png" alt="screenshot" /></p></li>
+<li><p>Ask a friend to test your game. How many points can they score? If your game is too easy, you can:</p>
+<ul>
+<li>Give the player less time;<br /></li>
+<li>Make the ghosts appear less often;<br /></li>
+<li>Make the ghosts smaller.</li>
+</ul>
+<p>Test your game a few times until you’re happy that it’s the right level of difficulty.</p></li>
+</ul>
+</section>
+<section id="save-your-project-5" class="level2 save">
+<h2>Save your project</h2>
+</section>
+<section id="challenge-more-objects" class="level2 challenge">
+<h2>Challenge: More objects</h2>
+<p>Can you add in other objects to your game?</p>
+<p><img src="ghost-final.png" alt="screenshot" /></p>
+<p>You’ll need to think about the objects you’re adding. Think about:</p>
+<ul>
+<li>How big is it?<br /></li>
+<li>Will it appear more or less often than the ghosts?<br /></li>
+<li>What will it look/sound like when it has been caught?<br /></li>
+<li>How many points will you score (or lose) for catching it?</li>
+</ul>
+<p>If you need help adding another object, you can reuse the steps above!</p>
+</section>
+<section id="save-your-project-6" class="level2 save">
+<h2>Save your project</h2>
+</section>
+</section>
+    </main>
+
+    <aside class="legal-notice copyright">
+      <p>These projects are for use outside the UK only. More information is available on our website at <a href="https://codeclubworld.org/">www.codeclubworld.org</a>.<br />This coursework is developed in the open on GitHub, at <a href="https://github.com/CodeClub/">www.github.com/CodeClub</a>. Come and join us!</p>
+      <p>&copy; 2016 Code Club. This content is for non-commercial use only and we reserve the right at any time to withdraw permission for use. Use of Code Club’s trade marks (including but not limited to its name and logo) requires prior written consent. Please read our <a href="https://www.codeclub.org.uk/terms-and-conditions">terms and conditions</a> before volunteering or hosting a Code Club.</p>
+    </aside>
+
+    <div id="legend">
+        <div>
+            <img src="../../../img/check.png" alt="Activity Checklist" />
+            <div class="caption"><span class="check_text">Activity Checklist</span></div>
+            <div class="description">Follow these <span class="check_text upper">instructions</span> one by one</div>
+        </div>
+        <div>
+          <img src="../../../img/flag.png" alt="Test your Project" />
+          <div class="caption"><span class="flag_text">Test your Project</span></div>
+          <div class="description">Click on the green flag to <span class="flag_text upper">test</span> your code</div>
+        </div>
+        <div>
+          <img src="../../../img/save.png" alt="Save your Project" />
+          <div class="caption"><span class="save_text">Save your Project</span></div>
+          <div class="description">Make sure to <span class="save_text upper">save</span> your work now</div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../../../js/lesson.js"></script>
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-30750176-5']);
+      _gaq.push(['_setDomainName', 'projects.codeclubworld.org']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
+</html>

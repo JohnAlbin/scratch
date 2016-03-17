@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html class="cc"  lang="en-GB">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="google-site-verification" content="LAa8xdL-G6vOe9RSZnECSduS5m1BMiM8U2erQku5yIE" />
+
+    <title>Space Junk — Code Club World Projects</title>
+    <link rel="shortcut icon" href="../../../img/cc_favicon.ico">
+
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <link rel="stylesheet" href="../../../css/master.min.css">
+  </head>
+
+  <body class="index-template cc">
+    <header class="header" role="banner">
+      <a class="home-link" href="../../../index.html"><img alt="" class="logo" height="100" src="../../../img/cc_logo.png"></a>
+      <h1 class="title">Space Junk</h1>
+      <span class="level-indicator">Scratch +</span>
+    </header>
+
+    <nav class="breadcrumbs"><ul class="breadcrumbs-list"><li class="breadcrumbs-item"><a class="breadcrumbs-link" href="../../../index.html">Languages</a></li><li class="breadcrumbs-item"><a class="breadcrumbs-link" href="../../index.html">English</a></li><li class="breadcrumbs-item"><a class="breadcrumbs-link" href="../index.html">Additional Scratch Projects</a></li><li class="breadcrumbs-item current">Space Junk</li></ul></nav>
+
+          <section class="note registration-note">
+        <p>All Code Clubs <u>must be registered</u>. By registering your club we can measure our impact, and we can continue to provide free resources that help children learn to code. You can register your club at <a href="https://www.codeclubworld.org/">codeclubworld.org</a>.</p>
+      </section>
+    
+    <main class="main lesson-steps" role="main">
+      
+<section id="introduction" class="level1 intro">
+<h1>Introduction</h1>
+<p>Help the Scratch mascot avoid the space junk and return safely back to Earth!</p>
+<div class="scratch-preview">
+  <iframe allowtransparency="true" width="485" height="402" src="http://scratch.mit.edu/projects/embed/59295958/?autostart=false" frameborder="0"></iframe>
+  <img src="sj-final.png">
+</div>
+
+
+</section>
+<section id="step-1-controlling-the-cat" class="level1 activity">
+<h1>Step 1: Controlling the cat</h1>
+<p>Let’s allow the player to control the cat with the arrow keys.</p>
+<section id="activity-checklist" class="level2 check">
+<h2>Activity Checklist</h2>
+<ul>
+<li><p>Start a new Scratch project. You can find the online Scratch editor at <a href="http://jumpto.cc/scratch-new">jumpto.cc/scratch-new</a>.</p></li>
+<li><p>Click the ‘Shrink’ button and then click on the cat a few times to make it a little smaller.</p>
+<p><img src="sj-shrink.png" alt="screenshot" /></p></li>
+<li><p>To add a background, click ‘Choose backdrop from library’ and select the ‘Stars’ backdrop.</p>
+<p><img src="sj-bg.png" alt="screenshot" /></p>
+<p>This is how your stage should look:</p>
+<p><img src="sj-stage.png" alt="screenshot" /></p></li>
+<li><p>Let’s move the cat to the left when the left arrow key is pressed.</p>
+<p>Click on your cat sprite, and add the following code:</p>
+<p><img src="d21f904a58f57c1bd4cb8dd408086f5891e45472.png" alt="when [left arrow v] key pressed?
+change x by (-10)" /></p>
+<p>Notice that you need to change the x coordinate to move the cat to the left.</p>
+<p><img src="sj-coords.png" alt="screenshot" /></p></li>
+<li><p>Test out your cat by pressing the left arrow key. You should see your cat move towards the left of the stage.</p></li>
+<li><p>To move the cat upwards when the up arrow key is pressed, you’ll need to add some more code:</p>
+<p><img src="a6ba9169c328a79f9aa454222cd6b9e978eacdbf.png" alt="when [up arrow v] key pressed?
+change y by (10)" /></p></li>
+<li><p>Test your project again to make sure that your new code works!</p></li>
+</ul>
+</section>
+<section id="save-your-project" class="level2 save">
+<h2>Save your project</h2>
+</section>
+<section id="challenge-more-movement" class="level2 challenge">
+<h2>Challenge: More movement</h2>
+<p>Can you add more code to your cat sprite, so that it moves up, down, left and right?</p>
+</section>
+<section id="save-your-project-1" class="level2 save">
+<h2>Save your project</h2>
+</section>
+</section>
+<section id="step-2-space-junk" class="level1 activity">
+<h1>Step 2: Space junk!</h1>
+<p>Let’s add some space junk for the cat to avoid.</p>
+<section id="activity-checklist-1" class="level2 check">
+<h2>Activity Checklist</h2>
+<ul>
+<li><p>Click ‘Add new sprite from library’ and add the ‘Planet2’ sprite to your stage. You can change the size of the planet if you want to.</p>
+<p><img src="sj-planet.png" alt="screenshot" /></p></li>
+<li><p>Add this code to make the planet move around the stage forever:</p>
+<p><img src="8a3a4737ca31b758074b6262d2816dc834aff136.png" alt="when flag clicked
+forever
+    move (2) steps
+    if on edge, bounce
+end" /></p></li>
+<li><p>Click the green flag to test our your new planet. It should move left and right across the stage.</p>
+<p>Have you noticed that your planet turns upside-down (rotates) when it hits the edge of the screen? To fix this, just add this code to your planet sprite:</p>
+<p><img src="f35057a791d7c1418c7ddba7debc06b6623ca11c.png" alt="set rotation style [don&#39;t rotate v]" /></p></li>
+<li><p>The game should end when the planet touches the cat, so let’s add this code <strong>inside</strong> the planet’s <code class="blockcontrol">forever</code> loop:</p>
+<p><img src="36f95e6e4492bbc96f814a9e6eb87150e34464ec.png" alt="if &lt;touching [Cat1 v]?&gt; then
+    stop [all v]
+end" /></p>
+<p>Here’s how your planet’s code should look:</p>
+<p><img src="71c9e74d7c1083f9e3f18a11fd489c994d51613e.png" alt="when flag clicked
+forever
+    move (2) steps
+    if on edge, bounce
+    if &lt;touching [Cat1 v]?&gt; then
+        stop [all v]
+    end
+end" /></p></li>
+<li><p>Test your game again - does the game end when the planet hits the cat?</p></li>
+</ul>
+</section>
+<section id="save-your-project-2" class="level2 save">
+<h2>Save your project</h2>
+</section>
+<section id="challenge-changing-your-planets-orbit" class="level2 challenge">
+<h2>Challenge: Changing your planet’s orbit</h2>
+<p>Can you change the way your planet moves? You can use these blocks to help you, as well as any other blocks you like.</p>
+<p><img src="sj-move-help.png" alt="screenshot" /></p>
+</section>
+<section id="save-your-project-3" class="level2 save">
+<h2>Save your project</h2>
+</section>
+</section>
+<section id="step-3-getting-back-to-earth" class="level1 activity">
+<h1>Step 3: Getting back to Earth</h1>
+<p>Can you avoid the space junk for 30 seconds, and get back to Earth safely?</p>
+<section id="activity-checklist-2" class="level2 check">
+<h2>Activity Checklist</h2>
+<ul>
+<li><p>Firstly, let’s add the Earth sprite to the center of your stage.</p>
+<p><img src="sj-earth.png" alt="screenshot" /></p></li>
+<li><p>Add this code to your Earth sprite, so that it starts off very small and slowly get’s bigger and bigger:</p>
+<p><img src="ae4469bbaed522b7a2849dee9e529b30d6f45616.png" alt="when flag clicked
+set size to (10) %
+forever
+    change size by (0.3)
+end" /></p></li>
+<li><p>Test out your Earth sprite. It should look as if your cat is slowly floating towards Earth!</p>
+<p><img src="sj-earth-big.png" alt="screenshot" /></p></li>
+<li><p>Click on your stage, and create a new variable to store the time.</p>
+<p><img src="sj-time.png" alt="screenshot" /></p>
+<p>You should now see your timer in the top-left of the stage.</p>
+<p><img src="sj-time-stage.png" alt="screenshot" /></p></li>
+<li><p>Add this code to your stage, so that the timer counts up forever:</p>
+<p><img src="6c04038ae7900e804b8e7a89cde10f5a4f7fd3b3.png" alt="when flag clicked
+forever
+    wait (0.1) secs
+    change [time v] by (0.1)
+end" /></p></li>
+<li><p>Click the green flag and you should see your timer start to count up!</p>
+<p><img src="sj-time-test.png" alt="screenshot" /></p></li>
+<li><p>The game is won if the cat can avoid the space junk for 30 seconds.</p>
+<p>For this to work, you just need to set your timer to 0 at the start of the game, and then wait until the timer gets to 30.</p>
+<p>Click on your cat sprite, and add this script:</p>
+<p><img src="69f2d4c169f736adfd5bdf7c07f09760456d9a63.png" alt="when flag clicked
+set [time v] to [0]
+wait until &lt;(time) &gt; [30]&gt;
+say [I made it!] for (2) secs
+stop [all v]" /></p></li>
+</ul>
+</section>
+<section id="save-your-project-4" class="level2 save">
+<h2>Save your project</h2>
+</section>
+<section id="challenge-more-space-junk" class="level2 challenge">
+<h2>Challenge: More space junk</h2>
+<p>Can you add more enemy sprites to your game, for the cat to avoid? You could add rocks, aliens, or anything else you like!</p>
+<p><img src="sj-more-junk.png" alt="screenshot" /></p>
+<p>See if you can make each sprite moves differently.</p>
+</section>
+<section id="save-your-project-5" class="level2 save">
+<h2>Save your project</h2>
+</section>
+<section id="challenge-2-players" class="level2 challenge">
+<h2>Challenge: 2 players</h2>
+<p>Can you improve your game, so that one of your enemy sprites is controlled by another player? They could use the w, a, s and d keys to control the enemy.</p>
+<p>You could even let one of your players use the mouse to control their character. Here are some blocks that may help you:</p>
+<p><img src="sj-mouse.png" alt="screenshot" /></p>
+</section>
+<section id="save-your-project-6" class="level2 save">
+<h2>Save your project</h2>
+</section>
+</section>
+    </main>
+
+    <aside class="legal-notice copyright">
+      <p>These projects are for use outside the UK only. More information is available on our website at <a href="https://codeclubworld.org/">www.codeclubworld.org</a>.<br />This coursework is developed in the open on GitHub, at <a href="https://github.com/CodeClub/">www.github.com/CodeClub</a>. Come and join us!</p>
+      <p>&copy; 2016 Code Club. This content is for non-commercial use only and we reserve the right at any time to withdraw permission for use. Use of Code Club’s trade marks (including but not limited to its name and logo) requires prior written consent. Please read our <a href="https://www.codeclub.org.uk/terms-and-conditions">terms and conditions</a> before volunteering or hosting a Code Club.</p>
+    </aside>
+
+    <div id="legend">
+        <div>
+            <img src="../../../img/check.png" alt="Activity Checklist" />
+            <div class="caption"><span class="check_text">Activity Checklist</span></div>
+            <div class="description">Follow these <span class="check_text upper">instructions</span> one by one</div>
+        </div>
+        <div>
+          <img src="../../../img/flag.png" alt="Test your Project" />
+          <div class="caption"><span class="flag_text">Test your Project</span></div>
+          <div class="description">Click on the green flag to <span class="flag_text upper">test</span> your code</div>
+        </div>
+        <div>
+          <img src="../../../img/save.png" alt="Save your Project" />
+          <div class="caption"><span class="save_text">Save your Project</span></div>
+          <div class="description">Make sure to <span class="save_text upper">save</span> your work now</div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../../../js/lesson.js"></script>
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-30750176-5']);
+      _gaq.push(['_setDomainName', 'projects.codeclubworld.org']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
+</html>
