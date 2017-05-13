@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html class="cc"  lang="en-GB">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="google-site-verification" content="LAa8xdL-G6vOe9RSZnECSduS5m1BMiM8U2erQku5yIE" />
+
+    <title>Boat Race — Code Club World Projects</title>
+    <link rel="shortcut icon" href="../../../img/cc_favicon.ico">
+
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <link rel="stylesheet" href="../../../css/master.min.css">
+  </head>
+
+  <body class="index-template cc">
+    <header class="header" role="banner">
+      <a class="home-link" href="../../../index.html"><img alt="" class="logo" height="100" src="../../../img/cc_logo.png"></a>
+      <h1 class="title">Boat Race (Homework for Max)</h1>
+      <span class="level-indicator">Scratch 1</span>
+    </header>
+
+    <main class="main lesson-steps" role="main">
+      
+<section id="introduction" class="level1 intro">
+<h1>Introduction</h1>
+<p>You are going to learn how to make a game, in which you’ll use the mouse to navigate a boat to a desert island.</p>
+<div class="scratch-preview">
+  <iframe allowtransparency="true" width="485" height="402" src="http://scratch.mit.edu/projects/embed/63957956/?autostart=false" frameborder="0"></iframe>
+  <img src="boat-final.png">
+</div>
+
+
+</section>
+<section id="step-1-planning-your-game" class="level1 activity">
+<h1>Step 1: Planning your game</h1>
+<section id="activity-checklist" class="level2 check">
+<h2>Activity Checklist</h2>
+<ul>
+<li><p>Start a new Scratch project, and delete the cat sprite so that your project is empty. You can find the online Scratch editor at <a href="http://jumpto.cc/scratch-new">jumpto.cc/scratch-new</a>.</p></li>
+<li><p>Click on your stage backdrop and plan out your level. You should add:</p>
+<ul>
+<li>Wood that your boat has to avoid;<br /></li>
+<li>A desert island that your boat has to get to.</li>
+</ul>
+<p>Here’s how your game could look:</p>
+<p><img src="boat-bg.png" alt="screenshot" /></p></li>
+</ul>
+</section>
+</section>
+<section id="step-2-controlling-the-boat" class="level1 activity">
+<h1>Step 2: Controlling the boat</h1>
+<section id="activity-checklist-1" class="level2 check">
+<h2>Activity Checklist</h2>
+<ul>
+<li><p>Download this <a href="./boat.png">boat.png image</a> and save it to your computer.</p></li>
+<li><p>Click ‘Upload sprite from file’ and add the ‘boat.png’ image. You should shrink the sprite and put it in it’s starting position.</p>
+<p><img src="boat-boat.png" alt="screenshot" /></p>
+<p>If you want to, you can draw your own boat instead!</p></li>
+<li><p>You are going to control the boat with your mouse. Add this code to your boat:</p>
+<p><img src="700c1ceb961cb5d08742261f56cda26c0cd41c7f.png" alt="    when flag clicked
+    point in direction (0 v)
+    go to x: (-190) y: (-150)
+    forever
+        point towards [mouse-pointer v]
+        move (1) steps
+    end" /></p></li>
+<li><p>Test out your boat, by clicking the flag and moving the mouse. Does the boat sail towards the mouse?</p>
+<p><img src="boat-mouse.png" alt="screenshot" /></p></li>
+<li><p>What happens if the boat reaches the mouse pointer?</p>
+<p>To stop this happening, you’ll need to add an <code class="blockcontrol">if</code> block to your code, so that the boat only moves if it is more than 5 pixels away from the mouse.</p>
+<p><img src="boat-pointer.png" alt="screenshot" /></p></li>
+<li><p>Test out your boat again, to check whether the problem has been fixed.</p></li>
+</ul>
+</section>
+<section id="save-your-project" class="level2 save">
+<h2>Save your project</h2>
+</section>
+</section>
+<section id="step-3-crashing" class="level1 activity new-page">
+<h1>Step 3: Crashing!</h1>
+<p>Your boat can sail through the wooden barriers! Let’s fix that.</p>
+<section id="activity-checklist-2" class="level2 check">
+<h2>Activity Checklist</h2>
+<ul>
+<li><p>You’ll need 2 costumes for your boat, one normal costume, and one for when the boat crashes. Duplicate your boat costume, and name them ‘normal’ and ‘hit’.</p></li>
+<li><p>Click on your ‘hit’ costume, and choose the ‘Select’ tool to grab bits of the boat and move and rotate them around. Make your boat look as if it’s crashed.</p>
+<p><img src="boat-hit-costume.png" alt="screenshot" /></p></li>
+<li><p>Add this code to your boat, inside the <code class="blockcontrol">forever</code> loop, so that it crashes when it touches any brown wooden bits:</p>
+<p><img src="3c2d29d189e581cb0841eae60263e96e37721f48.png" alt="    if &lt;touching color [#603C15]?&gt; then
+        switch costume to [hit v]
+        say [Noooooo!] for (1) secs
+        switch costume to [normal v]
+        point in direction (0 v)
+        go to x: (-215) y: (-160)
+    end" /></p>
+<p>This code is inside the <code class="blockcontrol">forever</code> loop, so that your code keeps checking if the boat has crashed.</p></li>
+<li><p>You should also make sure that your boat always starts looking like it’s ‘normal’.</p></li>
+<li><p>Now if you try to sail through a wooden barrier, you should see that your boat crashes and moves back to the start.</p>
+<p><img src="boat-crash.png" alt="screenshot" /></p></li>
+</ul>
+</section>
+<section id="save-your-project-1" class="level2 save">
+<h2>Save your project</h2>
+</section>
+<section id="challenge-winning" class="level2 challenge">
+<h2>Challenge: Winning!</h2>
+<p>Can you add another <code class="blockcontrol">if</code> statement to your boat’s code, so that the player wins when they get to the desert island?</p>
+<p>When the boat gets to the yellow desert island, it should say ‘YEAH!’ and then the game should stop. You’ll need to use this code:</p>
+<p><img src="73c1164e5db914bda5dd4334af548eb5707a4894.png" alt="    say [YEAH!] for (1) secs
+    stop [all v]" /></p>
+<p><img src="boat-win.png" alt="screenshot" /></p>
+</section>
+<section id="save-your-project-2" class="level2 save">
+<h2>Save your project</h2>
+</section>
+</section>
+<section id="step-4-time-trial" class="level1 activity">
+<h1>Step 4: Time Trial</h1>
+<p>Let’s add a timer to your game, so that the player has to get to the desert island as fast as possible.</p>
+<section id="activity-checklist-3" class="level2 check">
+<h2>Activity Checklist</h2>
+<ul>
+<li><p>Add a new variable called <code class="blockdata">time</code> to your stage. You can also change the display of your new variable. If you need help, have a look at the ‘Balloons’ project.</p>
+<p><img src="boat-variable.png" alt="screenshot" /></p></li>
+<li><p>Add this code to your <strong>stage</strong>, so that the timer counts up until the boat reaches the desert island:</p>
+<p><img src="9a546495c1f7a4ee1f5046b3e98fca33ac8da890.png" alt="    when flag clicked
+    set [time v] to [0]
+    forever
+        wait (0.1) secs
+        change [time v] by (0.1)
+    end" /></p></li>
+<li><p>That’s it! Test out your game and see how quickly you can get to the desert island!</p>
+<p><img src="boat-variable-test.png" alt="screenshot" /></p></li>
+</ul>
+</section>
+<section id="save-your-project-4" class="level2 save">
+<h2>Save your project</h2>
+</section>
+</section>
+<section id="step-5-obstacles-and-power-ups" class="level1 activity">
+<h1>We will finish next week!!!</h1>
+</section>
+    </main>
+
+    <aside class="legal-notice copyright">
+      <p>These projects are for use outside the UK only. More information is available on our website at <a href="https://codeclubworld.org/">www.codeclubworld.org</a>.<br />This coursework is developed in the open on GitHub, at <a href="https://github.com/CodeClub/">www.github.com/CodeClub</a>. Come and join us!</p>
+      <p>&copy; 2016 Code Club. This content is for non-commercial use only and we reserve the right at any time to withdraw permission for use. Use of Code Club’s trade marks (including but not limited to its name and logo) requires prior written consent. Please read our <a href="https://www.codeclub.org.uk/terms-and-conditions">terms and conditions</a> before volunteering or hosting a Code Club.</p>
+    </aside>
+
+    <div id="legend">
+        <div>
+            <img src="../../../img/check.png" alt="Activity Checklist" />
+            <div class="caption"><span class="check_text">Activity Checklist</span></div>
+            <div class="description">Follow these <span class="check_text upper">instructions</span> one by one</div>
+        </div>
+        <div>
+          <img src="../../../img/flag.png" alt="Test your Project" />
+          <div class="caption"><span class="flag_text">Test your Project</span></div>
+          <div class="description">Click on the green flag to <span class="flag_text upper">test</span> your code</div>
+        </div>
+        <div>
+          <img src="../../../img/save.png" alt="Save your Project" />
+          <div class="caption"><span class="save_text">Save your Project</span></div>
+          <div class="description">Make sure to <span class="save_text upper">save</span> your work now</div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../../../js/lesson.js"></script>
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-30750176-5']);
+      _gaq.push(['_setDomainName', 'projects.codeclubworld.org']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
+</html>
